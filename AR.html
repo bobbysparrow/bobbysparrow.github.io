@@ -56,18 +56,13 @@ li a:hover {
     
 <body BGCOLOR="#999999">
 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-      <a-gltf-model position="0 -1.8 -2" rotation="0 0 0" scale"3 3 3" src="Beetle.gltf"></a-gltf-model>
-     
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-     
-       </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>    
-
+       <a-scene embedded arjs gesture-detector vr-mode-ui="enabled: false" id="scene">
+              <a-entity camera>
+                <a-marker preset="hiro">
+                    <a-image src="images/Beetle.gltf" rotation="270 0 0"></a-image>
+                </a-marker>
+              </a-entity>
+        </a-scene>
 <p1></p1>
     
 </body>
